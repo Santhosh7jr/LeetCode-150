@@ -1,2 +1,2 @@
 # LeetCode-150
-Solutions for top LeetCode 150 interview problems
+Solutions for top 150 LeetCode interview problems
