@@ -26,7 +26,7 @@ public class Solution {
 
     }
 
-    public static void rotate(int[] nums, int k) {
+    /*public static void rotate(int[] nums, int k) {
         k%=nums.length;
         int j=0;
 
@@ -43,6 +43,32 @@ public class Solution {
         for(int i=0;i<nums.length;i++){
             nums[i]=newArr[i];
         }
+    }*/
+
+    public void rotate(int[] nums, int k) {
+
+        k%=nums.length;
+        int len = nums.length;
+
+        rotate(nums, 0, len - 1);
+        rotate(nums, 0, k - 1);
+        rotate(nums, k, len - 1);
+        
+    }
+
+    private static void rotate(int[] arr, int start, int end) {
+
+        while (start < end) {
+
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+
+            start++;
+            end--;
+
+        }
+
     }
 
 }
